@@ -19,8 +19,6 @@ import java.util.ArrayList;
 
 public class reminderFragment extends Fragment {
     private RecyclerView reminderList;
-    private RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext().getApplicationContext());
-
 
 
 
@@ -34,6 +32,7 @@ public class reminderFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(view.getContext());
 
         ReminderAdapter adapterNote = new ReminderAdapter();
         reminderList = getActivity().findViewById(R.id.reminderList);

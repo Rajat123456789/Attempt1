@@ -7,66 +7,55 @@
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/toolbar"
+        android:background="@color/golden"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/golden"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
-<com.google.android.material.tabs.TabLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/tabLayout"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/toolbar"
-    android:background="@color/rosegold">
-    <com.google.android.material.tabs.TabItem
-        android:layout_width="wrap_content"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/noteTab"
-        android:text="NOTES"
-        android:icon="@drawable/noteicon"/>
-    <com.google.android.material.tabs.TabItem
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/reminderTab"
-        android:text="REMINDERS"
-        android:icon="@drawable/remindericon"/>
-    <com.google.android.material.tabs.TabItem
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/missedTab"
-        android:text="MISSED"
-        android:icon="@drawable/missedicon"/>
-</com.google.android.material.tabs.TabLayout>
+        android:background="@color/rosegold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
 
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/noteTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/noteicon"
+            android:text="NOTES" />
 
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/reminderTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/remindericon"
+            android:text="REMINDERS" />
 
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/missedTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/missedicon"
+            android:text="MISSED" />
+    </com.google.android.material.tabs.TabLayout>
 
-<!--    -->
-
-<!-- -->
 
     <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tabLayout"
         app:layout_constraintHorizontal_bias="0.0"
-        android:id="@+id/viewPager"/>
-
-
-
-
-
-
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

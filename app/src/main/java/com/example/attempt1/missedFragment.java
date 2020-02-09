@@ -19,8 +19,6 @@ import java.util.ArrayList;
 
 public class missedFragment extends Fragment {
      RecyclerView missedList;
-    private RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext().getApplicationContext());
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,6 +29,8 @@ public class missedFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(view.getContext());
+
         MissedAdapter adapterMissed = new MissedAdapter();
         missedList = getActivity().findViewById(R.id.missedList);
         missedList.setLayoutManager(mLayoutManager);

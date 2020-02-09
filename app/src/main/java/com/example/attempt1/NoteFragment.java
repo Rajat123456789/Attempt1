@@ -17,9 +17,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 
-public class noteFragment extends Fragment{
-
-    private RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext().getApplicationContext());
+public class NoteFragment extends Fragment {
 
 
     @Override
@@ -37,22 +35,22 @@ public class noteFragment extends Fragment{
         //Adapter object
         //
 
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(view.getContext());
 
         NoteAdapter adapterNote = new NoteAdapter();
-        RecyclerView noteList = getActivity().findViewById(R.id.notesList);
+        RecyclerView noteList = view.findViewById(R.id.notesList);
         noteList.setLayoutManager(mLayoutManager);
         noteList.setAdapter(adapterNote);
         ArrayList<Note> inputNotes = generateNoteList();
         adapterNote.swapAll(inputNotes);
 
 
-
     }
 
-    ArrayList<Note> generateNoteList(){
+    ArrayList<Note> generateNoteList() {
         ArrayList<Note> notes = new ArrayList<>();
-        while (notes.size()<50){
-            notes.add(new Note("TITLE of Note","CONTENT of Note"));
+        while (notes.size() < 50) {
+            notes.add(new Note("TITLE of Note", "CONTENT of Note"));
         }
         return notes;
     }

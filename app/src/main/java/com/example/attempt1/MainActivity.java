@@ -73,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
 
         mPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTabLayout));
 
-
 //        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
 
 

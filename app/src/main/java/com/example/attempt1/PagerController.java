@@ -1,13 +1,8 @@
 package com.example.attempt1;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.viewpager.widget.PagerAdapter;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class PagerController extends FragmentPagerAdapter {
 
@@ -25,7 +20,7 @@ public class PagerController extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new noteFragment();
+                return new NoteFragment();
             case 1:
                 return new reminderFragment();
             case 2:
