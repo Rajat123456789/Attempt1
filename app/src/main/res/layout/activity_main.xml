@@ -46,6 +46,17 @@
             android:text="MISSED" />
     </com.google.android.material.tabs.TabLayout>
 
+<!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        android:layout_margin="40dp"-->
+<!--        android:id="@+id/add"-->
+<!--        android:text="+"-->
+<!--        android:textSize="35dp"-->
+<!--        android:textAlignment="center"-->
+<!--        />-->
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
@@ -56,6 +67,18 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tabLayout" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="40dp"
+        android:id="@+id/add"
+        android:text="+"
+        android:textSize="35dp"
+        android:textAlignment="center"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

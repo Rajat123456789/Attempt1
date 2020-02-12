@@ -17,7 +17,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 
-public class reminderFragment extends Fragment {
+public class ReminderFragment extends Fragment {
     private RecyclerView reminderList;
 
 

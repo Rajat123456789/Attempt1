@@ -2,6 +2,7 @@ package com.example.attempt1;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
@@ -11,7 +12,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TableLayout;
+import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
 
@@ -28,9 +31,10 @@ public class MainActivity extends AppCompatActivity {
     TabItem mreminderTab; //
     TabItem mmissedTab; //
     ViewPager mPager; //
+    AppCompatButton mAdd; //
+    int click = 0;
 
     PagerController mPagerController; //
-
 
 
     @Override
@@ -38,11 +42,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        mAdd = findViewById(R.id.add);
         mToolbar = findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("RemNotes");
-
 
 
         mTabLayout = findViewById(R.id.tabLayout);
@@ -73,14 +76,35 @@ public class MainActivity extends AppCompatActivity {
 
         mPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTabLayout));
 
-//        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+        if (mTabLayout.getSelectedTabPosition() == 2)
+            mAdd.setEnabled(false);
 
+
+        mAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mAdd.setEnabled(true);
+                if (mTabLayout.getSelectedTabPosition() == 0) {
+
+                    Toast.makeText(MainActivity.this, "Note would be added", Toast.LENGTH_SHORT).show();
+                }
+
+                if (mTabLayout.getSelectedTabPosition() == 1) {
+                    Toast.makeText(MainActivity.this, "Reminder would be added", Toast.LENGTH_SHORT).show();
+                }
+
+                if (mTabLayout.getSelectedTabPosition() == 2) {
+                    Toast.makeText(MainActivity.this, "NONE", Toast.LENGTH_SHORT).show();
+
+                }
+
+            }
+        });
 
 
     }
 
-
-           @Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         return super.onCreateOptionsMenu(menu);
     }
@@ -90,5 +114,11 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    }
+}
+
+
+
+
+
+
 

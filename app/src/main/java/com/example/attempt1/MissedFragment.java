@@ -17,7 +17,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 
-public class missedFragment extends Fragment {
+public class MissedFragment extends Fragment {
      RecyclerView missedList;
 
     @Override

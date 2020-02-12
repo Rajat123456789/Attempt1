@@ -22,9 +22,9 @@ public class PagerController extends FragmentPagerAdapter {
             case 0:
                 return new NoteFragment();
             case 1:
-                return new reminderFragment();
+                return new ReminderFragment();
             case 2:
-                return new missedFragment();
+                return new MissedFragment();
             default:
                 return null;
         }
