@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager.*;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -87,6 +88,8 @@ public class MainActivity extends AppCompatActivity {
                 if (mTabLayout.getSelectedTabPosition() == 0) {
 
                     Toast.makeText(MainActivity.this, "Note would be added", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(MainActivity.this,AddNote.class));
+
                 }
 
                 if (mTabLayout.getSelectedTabPosition() == 1) {
