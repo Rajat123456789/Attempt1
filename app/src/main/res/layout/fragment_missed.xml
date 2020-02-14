@@ -18,6 +18,8 @@
         android:id="@+id/missedList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:outlineSpotShadowColor="@color/yellowSoft"
+        android:outlineSpotShadowColor="@color/blue"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         tools:layout_editor_absoluteX="1dp"/>
 </FrameLayout>
