@@ -30,7 +30,7 @@
         android:background="@color/redSoft"
         android:textSize="40dp"
         android:textColor="@color/red"
-        android:text="  Enter title"
+        android:hint="Enter title"
         android:id="@+id/addNoteTitle"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/addNoteToolbar" />
@@ -41,7 +41,7 @@
         android:textSize="30dp"
         android:background="@color/yellowSoft"
         app:layout_constraintTop_toBottomOf="@id/addNoteTitle"
-        android:text="  Start writing..."
+        android:hint="  Start writing..."
         app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/addNoteContent"/>
 
