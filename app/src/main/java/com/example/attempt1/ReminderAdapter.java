@@ -47,6 +47,13 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.Remind
     void swapAll(ArrayList<Reminder> Reminders){
         this.Reminders.clear();
         this.Reminders.addAll(Reminders);
+        notifyDataSetChanged();
     }
+    void add(Reminder reminder )
+    {
+        this.Reminders.add(reminder);
+        notifyDataSetChanged();
+    }
+
 }
 

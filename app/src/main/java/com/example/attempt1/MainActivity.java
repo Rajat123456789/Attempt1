@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Note note = (Note) getIntent().getSerializableExtra("note");
         mAdd = findViewById(R.id.add);
         mToolbar = findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);

@@ -30,7 +30,10 @@ public class AddNote extends AppCompatActivity {
             public void onClick(View v) {
 
                 Note note = new Note(mTitle,mContent);
-                startActivity(new Intent(AddNote.this,MainActivity.class));
+                Intent i= new Intent(AddNote.this,MainActivity.class);
+                i.putExtra("note",note);
+                startActivity(i);
+
 
             }
         });

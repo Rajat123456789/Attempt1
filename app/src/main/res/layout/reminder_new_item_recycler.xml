@@ -18,7 +18,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:background="@color/lightgrey"
-        android:text="Item1"
+        android:text="Item"
         android:textSize="20dp"
         app:layout_constraintStart_toEndOf="@id/reminderCheckBox"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,6 +29,7 @@
         android:background="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/reminderCheckBox"/>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

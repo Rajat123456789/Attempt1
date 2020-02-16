@@ -1,9 +1,11 @@
 package com.example.attempt1;
 
 import androidx.appcompat.widget.AppCompatEditText;
-import androidx.appcompat.widget.AppCompatTextView;
 
-public class Note {
+
+import java.io.Serializable;
+
+public class Note implements Serializable {
     String ntitle;
     String ncontent;
     AppCompatEditText stringTitle;
