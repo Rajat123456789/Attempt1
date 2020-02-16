@@ -20,7 +20,7 @@
         android:text="Reminders"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:textSize="40dp"
+        android:textSize="30dp"
 
         />
 
@@ -84,7 +84,7 @@
         android:layout_height="wrap_content"
         android:background="@color/grey"
         android:text="DONE"
-        android:textSize="30dp"
+        android:textSize="25dp"
         android:textColor="@color/white"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
