@@ -1,11 +1,23 @@
 package com.example.attempt1;
 
-public class Reminder {
-    String ntitle;
-    String ncontent;
 
-    public Reminder(String title, String content){
-        ntitle = title;
-        ncontent = content;
+
+import java.io.Serializable;
+
+
+public class Reminder  implements Serializable {
+
+String titleOfReminder;
+String itemOfReminder;
+    public Reminder(){
+
     }
+
+    public Reminder(String title, String item){
+
+        titleOfReminder = title;
+        itemOfReminder = item;
+    }
+
+
 }

@@ -95,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if (mTabLayout.getSelectedTabPosition() == 1) {
                     Toast.makeText(MainActivity.this, "Reminder would be added", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(MainActivity.this, AddReminder.class));
                 }
 
                 if (mTabLayout.getSelectedTabPosition() == 2) {

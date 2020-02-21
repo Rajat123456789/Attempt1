@@ -38,8 +38,8 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.Remind
         }
 
         void updateData(Reminder Reminder){
-            mtitle.setText(Reminder.ntitle);
-            mcontent.setText(Reminder.ncontent);
+            mtitle.setText(Reminder.titleOfReminder);
+            mcontent.setText(Reminder.itemOfReminder);
         }
 
     }
@@ -49,11 +49,12 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.Remind
         this.Reminders.addAll(Reminders);
         notifyDataSetChanged();
     }
-    void add(Reminder reminder )
-    {
-        this.Reminders.add(reminder);
-        notifyDataSetChanged();
-    }
+
+//    void add(Reminder reminder )
+//    {
+//        this.Reminders.add(reminder);
+//        notifyDataSetChanged();
+//    }
 
 }
 

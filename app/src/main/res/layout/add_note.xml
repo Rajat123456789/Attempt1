@@ -3,12 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/yellowSoft"
+    android:background="@color/lightgrey"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 <androidx.appcompat.widget.Toolbar
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/grey"
+    android:background="@color/lightgrey"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +27,7 @@
     <androidx.appcompat.widget.AppCompatEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/redSoft"
+        android:background="@color/grey"
         android:textSize="40dp"
         android:textColor="@color/red"
         android:hint="Enter title"
@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="30dp"
-        android:background="@color/yellowSoft"
+        android:background="@color/lightgrey"
         app:layout_constraintTop_toBottomOf="@id/addNoteTitle"
         android:hint="  Start writing..."
         app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +55,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginRight="10dp"
-        android:id="@+id/addNoteDone"
+        android:id="@+id/addReminderDone"
         android:outlineAmbientShadowColor="@color/golden"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
