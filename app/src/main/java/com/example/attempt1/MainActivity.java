@@ -10,6 +10,7 @@ import androidx.viewpager.*;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -25,7 +26,7 @@ import com.google.android.material.tabs.TabLayout;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
+    int time = 1000;
     Toolbar mToolbar; //
     TabLayout mTabLayout;//
     TabItem mnoteTab; //
@@ -42,7 +43,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//
+//                startActivity(new Intent(MainActivity.this,SplashScreen.class));
+//                finish();
+//            }
+//        },time);
         Note note = (Note) getIntent().getSerializableExtra("note");
         mAdd = findViewById(R.id.add);
         mToolbar = findViewById(R.id.toolbar);
