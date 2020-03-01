@@ -1,4 +1,4 @@
-package com.example.attempt1;
+package com.example.attempt1.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +7,9 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.attempt1.Missed;
+import com.example.attempt1.R;
 
 import java.util.ArrayList;
 
@@ -44,7 +47,7 @@ public class MissedAdapter extends RecyclerView.Adapter<MissedAdapter.MissedView
 
     }
 
-    void swapAll(ArrayList<Missed> Misseds){
+    public void swapAll(ArrayList<Missed> Misseds){
         this.Misseds.clear();
         this.Misseds.addAll(Misseds);
     }

@@ -1,7 +1,5 @@
-package com.example.attempt1;
+package com.example.attempt1.fragment;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,6 +11,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.attempt1.Missed;
+import com.example.attempt1.R;
+import com.example.attempt1.adapter.MissedAdapter;
 
 import java.util.ArrayList;
 

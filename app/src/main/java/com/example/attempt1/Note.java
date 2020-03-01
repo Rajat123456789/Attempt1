@@ -6,8 +6,8 @@ import androidx.appcompat.widget.AppCompatEditText;
 import java.io.Serializable;
 
 public class Note implements Serializable {
-    String ntitle;
-    String ncontent;
+    public String ntitle;
+    public String ncontent;
     AppCompatEditText stringTitle;
     AppCompatEditText stringContent;
 

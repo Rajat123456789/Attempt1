@@ -25,11 +25,10 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/addReminderTitle"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/grey"
-        android:textSize="40dp"
+        android:textSize="30dp"
         android:textColor="@color/greenFont"
         android:hint="Enter title"
         app:layout_constraintStart_toEndOf="parent"
@@ -52,7 +51,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@id/addReminderTime"
         app:layout_constraintTop_toBottomOf="@id/addReminderTitle"
-        android:text="TIME SELECTED IS"
+        android:text=""
         android:textSize="30dp"
         android:layout_marginTop="5dp"/>
 
@@ -71,7 +70,7 @@
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DATE SELECTED IS"
+        android:text=" "
         android:textSize="30dp"
         app:layout_constraintStart_toEndOf="@id/addReminderDate"
         app:layout_constraintTop_toBottomOf="@id/addReminderTimeSelected"
@@ -98,6 +97,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Item"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
         app:layout_constraintTop_toBottomOf="@id/addReminderDateSelected"
         app:layout_constraintStart_toStartOf="parent"
         />
@@ -114,10 +115,11 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/reminderItemList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/addReminderItemButton"
+        app:layout_constraintBottom_toBottomOf="parent"
         />
 
 

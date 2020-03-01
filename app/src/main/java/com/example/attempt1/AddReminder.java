@@ -2,6 +2,7 @@ package com.example.attempt1;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,16 +11,24 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Calendar;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatTextView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.attempt1.adapter.NoteAdapter;
+import com.example.attempt1.adapter.ReminderItemAdapter;
 
 public class AddReminder extends AppCompatActivity implements Serializable,DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
 
+    ReminderItemAdapter reminderItemAdapter = new ReminderItemAdapter();
 
     AppCompatButton doneAddReminder;
     AppCompatButton datePicker;
@@ -31,6 +40,8 @@ public class AddReminder extends AppCompatActivity implements Serializable,DateP
 
     AppCompatEditText remTitle;
     AppCompatEditText remItem;
+
+
 
 
     @Override
@@ -46,6 +57,11 @@ public class AddReminder extends AppCompatActivity implements Serializable,DateP
 
         remTitle= findViewById(R.id.addReminderTitle);
         remItem = findViewById(R.id.addReminderItemText);
+
+        RecyclerView.LayoutManager itemListLayoutManager = new LinearLayoutManager(this);
+        RecyclerView reminderItemList = findViewById(R.id.reminderItemList);
+        reminderItemList.setLayoutManager(itemListLayoutManager);
+        reminderItemList.setAdapter(reminderItemAdapter);
 
         datePicker.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,16 +85,22 @@ public class AddReminder extends AppCompatActivity implements Serializable,DateP
             }
         });
 
+////////////////////////////////////////////////////////////////////////////////////////////
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(AddReminder.this, "A new item in reminder will be added", Toast.LENGTH_SHORT).show();
-                remItem = null;
-                Reminder rem = new Reminder();
+                //remItem = null;
+
+                reminderItemAdapter.add(remItem.getText().toString());
+                remItem.setText(" ");
+
             }
         });
 
-    }
+
+        }
+
 
 
     public void showTimePickerDialog(){

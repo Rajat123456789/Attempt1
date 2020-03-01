@@ -1,4 +1,4 @@
-package com.example.attempt1;
+package com.example.attempt1.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +7,9 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.attempt1.Note;
+import com.example.attempt1.R;
 
 import java.util.ArrayList;
 
@@ -44,7 +47,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
 
     }
 
-    void swapAll(ArrayList<Note> notes){
+    public void swapAll(ArrayList<Note> notes){
         this.notes.clear();
         this.notes.addAll(notes);
     }

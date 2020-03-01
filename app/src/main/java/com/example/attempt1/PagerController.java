@@ -4,6 +4,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.example.attempt1.fragment.MissedFragment;
+import com.example.attempt1.fragment.NoteFragment;
+import com.example.attempt1.fragment.ReminderFragment;
+
 public class PagerController extends FragmentPagerAdapter {
 
     int tabCounts;

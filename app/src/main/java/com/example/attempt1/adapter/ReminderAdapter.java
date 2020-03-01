@@ -1,4 +1,4 @@
-package com.example.attempt1;
+package com.example.attempt1.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +7,9 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.attempt1.R;
+import com.example.attempt1.Reminder;
 
 import java.util.ArrayList;
 
@@ -44,7 +47,7 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.Remind
 
     }
 
-    void swapAll(ArrayList<Reminder> Reminders){
+    public void swapAll(ArrayList<Reminder> Reminders){
         this.Reminders.clear();
         this.Reminders.addAll(Reminders);
         notifyDataSetChanged();

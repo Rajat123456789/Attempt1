@@ -43,14 +43,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        new Handler().postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//
-//                startActivity(new Intent(MainActivity.this,SplashScreen.class));
-//                finish();
-//            }
-//        },time);
+
         Note note = (Note) getIntent().getSerializableExtra("note");
         mAdd = findViewById(R.id.add);
         mToolbar = findViewById(R.id.toolbar);
@@ -86,6 +79,29 @@ public class MainActivity extends AppCompatActivity {
 
         mPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTabLayout));
 
+        mPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                if (position == 2){
+                    mAdd.setVisibility(View.INVISIBLE);
+                }
+
+                else{
+                    mAdd.setVisibility(View.VISIBLE);
+                }
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
         if (mTabLayout.getSelectedTabPosition() == 2)
             mAdd.setEnabled(false);
 
@@ -106,10 +122,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, AddReminder.class));
                 }
 
-                if (mTabLayout.getSelectedTabPosition() == 2) {
-                    Toast.makeText(MainActivity.this, "NONE", Toast.LENGTH_SHORT).show();
 
-                }
 
             }
         });

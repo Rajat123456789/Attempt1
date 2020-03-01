@@ -1,14 +1,12 @@
 package com.example.attempt1;
 
-
-
 import java.io.Serializable;
 
 
 public class Reminder  implements Serializable {
 
-String titleOfReminder;
-String itemOfReminder;
+public String titleOfReminder;
+public String itemOfReminder;
     public Reminder(){
 
     }
